@@ -20,7 +20,7 @@ A powerful, free online code obfuscation tool supporting multiple programming la
 
 - HTML5, CSS3, JavaScript
 - javascript-obfuscator library
-- GitHub Pages for hosting
+- Netlifty for hosting
 
 ## Local Development
 
@@ -30,7 +30,7 @@ A powerful, free online code obfuscation tool supporting multiple programming la
 
 ## Deployment
 
-Automatically deploys to GitHub Pages on push to main branch.
+Automatically deploys to Netlify on push to main branch.
 
 ## License
 

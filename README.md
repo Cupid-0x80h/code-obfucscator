@@ -14,7 +14,7 @@ A powerful, free online code obfuscation tool supporting multiple programming la
 
 ## Live Demo
 
-🌐 [https://yourusername.github.io/code-obfuscator](https://yourusername.github.io/code-obfuscator)
+🌐 [https://code-obfucscator.netlify.app/](https://code-obfucscator.netlify.app/)
 
 ## Technologies Used
 

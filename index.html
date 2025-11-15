@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeGuard - Professional Code Obfuscator</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>CodeGuard</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features"><i class="fas fa-star"></i> Features</a></li>
+                <li><a href="https://github.com/Cupid-0x80h/code-obfucscator?tab=readme-ov-file#readme-ov-file"><i class="fas fa-book"></i> Docs</a></li>
+                <li><a href="https://github.com/Cupid-0x80h/" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Professional Code Obfuscator</h1>
+            <p>Protect your intellectual property with military-grade code obfuscation</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <i class="fas fa-code"></i>
+                    <div>
+                        <strong>4+</strong>
+                        <span>Languages</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-shield-virus"></i>
+                    <div>
+                        <strong>8+</strong>
+                        <span>Protection Layers</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-bolt"></i>
+                    <div>
+                        <strong>Fast</strong>
+                        <span>Processing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Application -->
+    <main class="container">
+        <!-- Sidebar Controls -->
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h3><i class="fas fa-sliders-h"></i> Configuration</h3>
+                
+                <div class="form-group">
+                    <label for="language">
+                        <i class="fas fa-code"></i>
+                        Language
+                    </label>
+                    <select id="language" class="select-input">
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">Python</option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="level">
+                        <i class="fas fa-chart-line"></i>
+                        Protection Level
+                    </label>
+                    <select id="level" class="select-input">
+                        <option value="low">Low - Fast & Readable</option>
+                        <option value="medium" selected>Medium - Balanced</option>
+                        <option value="high">High - Maximum Security</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3><i class="fas fa-cog"></i> Advanced Options</h3>
+                
+                <label class="checkbox-container">
+                    <input type="checkbox" id="compact" checked>
+                    <span class="checkmark"></span>
+                    <div class="checkbox-label">
+                        <i class="fas fa-compress-alt"></i>
+                        <span>Compact Code</span>
+                    </div>
+                </label>
+
+                <label class="checkbox-container">
+                    <input type="checkbox" id="selfDefending">
+                    <span class="checkmark"></span>
+                    <div class="checkbox-label">
+                        <i class="fas fa-user-shield"></i>
+                        <span>Self Defending</span>
+                    </div>
+                </label>
+
+                <label class="checkbox-container">
+                    <input type="checkbox" id="debugProtection">
+                    <span class="checkmark"></span>
+                    <div class="checkbox-label">
+                        <i class="fas fa-bug"></i>
+                        <span>Debug Protection</span>
+                    </div>
+                </label>
+
+                <label class="checkbox-container">
+                    <input type="checkbox" id="stringArray" checked>
+                    <span class="checkmark"></span>
+                    <div class="checkbox-label">
+                        <i class="fas fa-th-list"></i>
+                        <span>String Array</span>
+                    </div>
+                </label>
+
+                <label class="checkbox-container">
+                    <input type="checkbox" id="rotateStringArray">
+                    <span class="checkmark"></span>
+                    <div class="checkbox-label">
+                        <i class="fas fa-sync-alt"></i>
+                        <span>Rotate String Array</span>
+                    </div>
+                </label>
+            </div>
+
+            <div class="sidebar-section">
+                <button id="obfuscateBtn" class="btn btn-primary btn-block">
+                    <i class="fas fa-lock"></i>
+                    <span>Obfuscate Code</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Editor Area -->
+        <section class="editor-area">
+            <!-- Action Bar -->
+            <div class="action-bar">
+                <div class="action-group">
+                    <button id="copyBtn" class="btn btn-secondary" title="Copy to Clipboard">
+                        <i class="fas fa-copy"></i>
+                        <span>Copy</span>
+                    </button>
+                    <button id="downloadBtn" class="btn btn-secondary" title="Download File">
+                        <i class="fas fa-download"></i>
+                        <span>Download</span>
+                    </button>
+                    <button id="clearBtn" class="btn btn-danger" title="Clear All">
+                        <i class="fas fa-trash-alt"></i>
+                        <span>Clear</span>
+                    </button>
+                </div>
+
+                <!-- Stats Display -->
+                <div class="stats-bar" id="statsBar" style="display: none;">
+                    <div class="stat-badge">
+                        <i class="fas fa-file-code"></i>
+                        <span id="originalSize">0</span> bytes
+                    </div>
+                    <i class="fas fa-arrow-right"></i>
+                    <div class="stat-badge highlight">
+                        <i class="fas fa-file-archive"></i>
+                        <span id="obfuscatedSize">0</span> bytes
+                    </div>
+                    <div class="stat-badge success">
+                        <i class="fas fa-compress"></i>
+                        <span id="compression">0</span>%
+                    </div>
+                </div>
+            </div>
+
+            <!-- Code Editors -->
+            <div class="editor-grid">
+                <div class="editor-panel">
+                    <div class="panel-header">
+                        <div class="panel-title">
+                            <i class="fas fa-file-code"></i>
+                            <span>Source Code</span>
+                        </div>
+                        <div class="panel-info">
+                            <span id="inputLines">0 lines</span>
+                        </div>
+                    </div>
+                    <div class="editor-wrapper">
+                        <div class="line-numbers" id="inputLineNumbers"></div>
+                        <textarea 
+                            id="inputCode" 
+                            class="code-editor" 
+                            placeholder="Paste your code here..."
+                            spellcheck="false"
+                        ></textarea>
+                    </div>
+                </div>
+
+                <div class="editor-panel">
+                    <div class="panel-header">
+                        <div class="panel-title">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Obfuscated Output</span>
+                        </div>
+                        <div class="panel-info">
+                            <span id="outputLines">0 lines</span>
+                        </div>
+                    </div>
+                    <div class="editor-wrapper">
+                        <div class="line-numbers" id="outputLineNumbers"></div>
+                        <textarea 
+                            id="outputCode" 
+                            class="code-editor" 
+                            readonly 
+                            placeholder="Protected code will appear here..."
+                            spellcheck="false"
+                        ></textarea>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>CodeGuard</h4>
+                <p>Professional code protection for developers</p>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <a href="https://github.com/Cupid-0x80h/code-obfucscator?tab=readme-ov-file#readme-ov-file"><i class="fas fa-book"></i> Documentation</a>
+                <a href="#"><i class="fas fa-question-circle"></i> FAQ</a>
+                <a href="https://github.com/Cupid-0x80h/"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <p class="disclaimer">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Obfuscation is not encryption. Use as part of a comprehensive security strategy.
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CodeGuard. Built with <i class="fas fa-heart"></i> for developers</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/javascript-obfuscator/dist/index.browser.js"></script>
+    <script src="js/obfuscators.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
